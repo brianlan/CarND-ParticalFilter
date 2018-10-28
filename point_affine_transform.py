@@ -4,6 +4,9 @@ import numpy as np
 
 
 def rotate(p, theta):
+    """convert a point position from local coord-system (L) to global coord-system (G)
+    by rotating the included angle from L to G.
+    """
     r = np.array([[cos(theta), sin(theta)], [-sin(theta), cos(theta)]])
     return p.dot(r)
 
